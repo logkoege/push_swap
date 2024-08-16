@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f1.c                                               :+:      :+:    :+:   */
+/*   f2.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/16 12:25:41 by logkoege          #+#    #+#             */
-/*   Updated: 2024/08/16 12:36:33 by logkoege         ###   ########.fr       */
+/*   Created: 2024/08/16 12:26:21 by logkoege          #+#    #+#             */
+/*   Updated: 2024/08/16 15:22:50 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pb(void)
+void	swap(t_stack *stack)
 {
-	return ;
+	int	tmp;
+
+	if (stack->top < 1)
+		return ;
+	tmp = stack->pile[stack->top];
+	stack->pile[stack->top] = stack->pile[stack->top - 1];
+	stack->pile[stack->top - 1] = tmp;
 }
 
-void	pa(void)
+void	ss(t_stack *stack_a, t_stack *stack_b)
 {
-	return ;
+	swap(stack_a);
+	swap(stack_b);
+	ft_printf("ss\n");
 }
 
-void	ra(void)
+void	sa(t_stack *stack_a)
 {
-	return ;
+	swap(stack_a);
+	ft_printf("sa\n");
 }
 
-void	rb(void)
+void	sb(t_stack *stack_b)
 {
-	return ;
-}
-
-void	rr(void)
-{
-	return ;
+	swap(stack_b);
+	ft_printf("sb\n");
 }

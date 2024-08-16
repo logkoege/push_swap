@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   f2.c                                               :+:      :+:    :+:   */
+/*   f1.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/16 12:26:21 by logkoege          #+#    #+#             */
-/*   Updated: 2024/08/16 12:55:07 by logkoege         ###   ########.fr       */
+/*   Created: 2024/08/16 12:25:41 by logkoege          #+#    #+#             */
+/*   Updated: 2024/08/16 15:22:49 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(void)
+void	push(t_stack *src, t_stack *dest)
 {
-	return ;
+	if (src->top < 0)
+		return ;
+	dest->top++;
+	dest->pile[dest->top] = src->pile[src->top];
+	src->top--;
 }
 
-void	sb(void)
+void	pa(t_stack *stack_a, t_stack *stack_b)
 {
-	return ;
+	push(stack_b, stack_a);
+	ft_printf("pa\n");
 }
 
-void	ss(void)
+void	pb(t_stack *stack_a, t_stack *stack_b)
 {
-	return ;
-}
-
-void	rra(void)
-{
-	return ;
-}
-
-void	rrb(void)
-{
-	return ;
+	push(stack_a, stack_b);
+	ft_printf("pb\n");
 }
