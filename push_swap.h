@@ -20,19 +20,18 @@
 # include "./printf/ft_printf.h"
 # include "./libft/libft.h"
 
-typedef struct s_swap
+typedef struct s_node
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
-	int		asize;
-	int		bsize;
-}		t_swap;
-typedef struct s_stack
+	int	index;
+	int	data;
+	struct s_node *next;
+}		t_node;
+
+typedef struct s_pushswap
 {
-	int	top;
-	int	size;
-	int	pile[1024];
-}		t_stack;
+	t_node *a;
+	t_node *b;
+}		t_pushswap;
 
 void	push(t_stack *src, t_stack *dest);
 void	pa(t_stack *stack_a, t_stack *stack_b);
