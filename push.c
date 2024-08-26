@@ -12,16 +12,28 @@
 
 #include "push_swap.h"
 
-
-
 void	pa(t_pushswap *ps)
 {
-	push(stack_b, stack_a);
+	t_node	first_b;
+
+	if (ps->b == NULL || ps == NULL)
+		return;
+	first_b = ps->b;
+	ps->b = ps->b->next;
+	first_b->next = ps->a;
+	ps->a = first_b;
 	ft_printf("pa\n");
 }
 
 void	pb(t_pushswap *ps)
 {
-	push(stack_a, stack_b);
+	t_node	first_a;
+
+	if (ps->a == NULL || ps == NULL)
+		return;
+	first_a = ps->a;
+	ps->b = ps->a->next;
+	first_a->next = ps->b;
+	ps->b = first_a;
 	ft_printf("pb\n");
 }
