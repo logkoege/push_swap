@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:54:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/08/16 14:44:40 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/08/26 20:06:52 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ int	main(int argc, char **argv)
 		args = ft_split(argv[1], ' ');
 	else
 		args = argv + 1;
+	if pars_arg(argv)
 }
