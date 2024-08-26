@@ -14,22 +14,25 @@
 
 void	ra(t_pushswap *ps)
 {
+	ft_printf("ra/n");
 	return ;
 }
 
 void	rb(t_pushswap *ps)
 {
-	ft_printf(rb/n);
+	ft_printf("rb/n");
 	return ;
 }
 
 void	rr(t_pushswap *ps)
 {
+	ft_printf("rr/n");
 	return ;
 }
 
 void	rra(t_pushswap *ps)
 {
+	ft_printf("rra/n");
 	return ;
 }
 
