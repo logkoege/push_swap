@@ -33,12 +33,10 @@ typedef struct s_pushswap
 	t_node *b;
 }		t_pushswap;
 
-void	push(t_stack *src, t_stack *dest);
-void	pa(t_stack *stack_a, t_stack *stack_b);
-void	pb(t_stack *stack_a, t_stack *stack_b);
-void	swap(t_stack *stack);
-void	ss(t_stack *stack_a, t_stack *stack_b);
-void	sa(t_stack *stack_a);
-void	sb(t_stack *stack_b);
+void	pa(t_pushswap *ps);
+void	pb(t_pushswap *ps);
+void	ss(t_pushswap *ps);
+void	sa(t_pushswap *ps);
+void	sb(t_pushswap *ps);
 
 #endif
