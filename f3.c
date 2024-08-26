@@ -12,27 +12,27 @@
 
 #include "push_swap.h"
 
-void	ra(void)
+void	ra(t_pushswap *ps)
 {
 	return ;
 }
 
-void	rb(void)
+void	rb(t_pushswap *ps)
 {
 	return ;
 }
 
-void	rr(void)
+void	rr(t_pushswap *ps)
 {
 	return ;
 }
 
-void	rra(void)
+void	rra(t_pushswap *ps)
 {
 	return ;
 }
 
-void	rrb(void)
+void	rrb(t_pushswap *ps)
 {
 	return ;
 }
