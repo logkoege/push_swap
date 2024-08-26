@@ -38,5 +38,6 @@ void	rra(t_pushswap *ps)
 
 void	rrb(t_pushswap *ps)
 {
+	ft_printf("rrb/n");
 	return ;
 }
