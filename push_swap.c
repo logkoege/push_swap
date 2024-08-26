@@ -14,8 +14,6 @@
 
 int	main(int argc, char **argv)
 {
-	t_list	*a;
-	t_list	*b;
 	char	**args;
 
 	if (argc < 2)
