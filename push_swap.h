@@ -20,14 +20,6 @@
 # include "./printf/ft_printf.h"
 # include "./libft/libft.h"
 
-typedef struct s_push
-{
-	int	next;
-	int	max;
-	int	mid;
-	int	flag;
-}	t_push;
-
 typedef struct s_swap
 {
 	t_list	*stack_a;
