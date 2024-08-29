@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:25:41 by logkoege          #+#    #+#             */
-/*   Updated: 2024/08/26 19:45:42 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/08/29 18:11:53 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	pa(t_pushswap *ps)
 	t_node	tmp_b;
 
 	if (ps->b == NULL || ps == NULL)
-		return;
+		return ;
 	first_b = ps->b;
 	ps->b = ps->b->next;
 	first_b->next = ps->a;
@@ -30,7 +30,7 @@ void	pb(t_pushswap *ps)
 	t_node	tmp_a;
 
 	if (ps->a == NULL || ps == NULL)
-		return;
+		return ;
 	first_a = ps->a;
 	ps->b = ps->a->next;
 	first_a->next = ps->b;

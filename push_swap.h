@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:55:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/08/26 19:23:55 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/08/29 18:12:55 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@
 
 typedef struct s_node
 {
-	int	index;
-	int	data;
-	struct s_node *next;
+	int				index;
+	int				data;
+	struct s_node	*next;
 }		t_node;
 
 typedef struct s_pushswap
 {
-	t_node *a;
-	t_node *b;
+	t_node	*a;
+	t_node	*b;
 }		t_pushswap;
 
 void	pa(t_pushswap *ps);
