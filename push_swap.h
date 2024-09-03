@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:55:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/03 19:48:13 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/03 23:38:26 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ int		if_doubles(char **argv);
 int		nbr_cmp(char *s1, char *s2);
 int		enlv_argifzero(char *argv);
 int		argv_nb(char *argv);
-void	pars_arg(char **argv);
+int		pars_arg(char **argv);
 
 #endif

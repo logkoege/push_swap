@@ -6,16 +6,16 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 20:07:26 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/03 19:46:13 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/03 23:38:47 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pars_arg(char **argv)
+int	pars_arg(char **argv)
 {
 	int	i;
-	int	sans_0;
+	int	nb_zero;
 
 	i = 1;
 	nb_zero = 0;

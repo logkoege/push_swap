@@ -6,33 +6,67 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:37:52 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/03 19:49:20 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/03 23:39:30 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "push_swap.h"
+#include "push_swap.h"
 
-// void	ra(t_pushswap *ps)
-// {
-// 	ft_printf("ra/n");
-// }
+void	ra(t_pushswap *ps)
+{
+	t_node	*tmp;
+	t_node	*last;
 
-// void	rb(t_pushswap *ps)
-// {
-// 	ft_printf("rb/n");
-// }
+	tmp = ps->a;
+	last = ft_lstlast(ps->a);
+	last->next = tmp;
+	ps->a = tmp->next;
+	tmp->next = NULL;
+	ft_printf("ra/n");
+}
 
-// void	rr(t_pushswap *ps)
-// {
-// 	ft_printf("rr/n");
-// }
+void	rb(t_pushswap *ps)
+{
+	t_node	*tmp;
+	t_node	*last;
 
-// void	rra(t_pushswap *ps)
-// {
-// 	ft_printf("rra/n");
-// }
+	tmp = ps->b;
+	last = ft_lstlast(ps->b);
+	last->next = tmp;
+	ps->b = tmp->next;
+	tmp->next = NULL;
+	ft_printf("rb/n");
+}
 
-// void	rrb(t_pushswap *ps)
-// {
-// 	ft_printf("rrb/n");
-// }
+void	rr(t_pushswap *ps)
+{
+	ra(ps);
+	rb(ps);
+	ft_printf("rr/n");
+}
+
+void	rra(t_pushswap *ps)
+{
+	t_node	*tmp;
+	t_node	*last;
+
+	last = lst_last(ps->a);
+	tmp = before_last(ps->a);
+	last->next = ps->a;
+	ps->a = last;
+	tmp->next = NULL;
+	ft_printf("rra/n");
+}
+
+void	rrb(t_pushswap *ps)
+{
+	t_node	*tmp;
+	t_node	*last;
+
+	last = lst_last(ps->b);
+	tmp = before_last(ps->b);
+	last->next = ps->b;
+	ps->b = last;
+	tmp->next = NULL;
+	ft_printf("rrb/n");
+}

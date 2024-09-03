@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:25:41 by logkoege          #+#    #+#             */
-/*   Updated: 2024/08/29 18:11:53 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/04 00:03:08 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,52 @@
 
 void	pa(t_pushswap *ps)
 {
-	t_node	tmp_b;
+	t_node	*tmp;
 
 	if (ps->b == NULL || ps == NULL)
 		return ;
-	first_b = ps->b;
+	tmp = ps->b;
 	ps->b = ps->b->next;
-	first_b->next = ps->a;
-	ps->a = first_b;
+	tmp->next = ps->a;
+	ps->a = tmp;
 	ft_printf("pa\n");
 }
 
 void	pb(t_pushswap *ps)
 {
-	t_node	tmp_a;
+	t_node	*tmp;
 
 	if (ps->a == NULL || ps == NULL)
 		return ;
-	first_a = ps->a;
-	ps->b = ps->a->next;
-	first_a->next = ps->b;
-	ps->b = first_a;
+	tmp = ps->a;
+	ps->a = ps->a->next;
+	tmp->next = ps->b;
+	ps->b = tmp;
 	ft_printf("pb\n");
+}
+
+t_list	*before_last(t_node *lst)
+{
+	t_node	*tmp;
+
+	while (lst)
+	{
+		tmp = lst;
+		if (lst->next != NULL)
+		{
+			lst = lst->next;
+			if (lst->next == NULL)
+			{
+				return (tmp);
+			}
+		}
+	}
+	return (NULL);
+}
+
+void	rrr(t_pushswap *ps)
+{
+	rra(ps);
+	rrb(ps);
+	printf("rrr\n");
 }
