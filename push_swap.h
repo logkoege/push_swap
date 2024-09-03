@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:55:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/08/29 18:12:55 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/03 19:48:13 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,10 @@ void	pb(t_pushswap *ps);
 void	ss(t_pushswap *ps);
 void	sa(t_pushswap *ps);
 void	sb(t_pushswap *ps);
+int		if_doubles(char **argv);
+int		nbr_cmp(char *s1, char *s2);
+int		enlv_argifzero(char *argv);
+int		argv_nb(char *argv);
+void	pars_arg(char **argv);
 
 #endif
