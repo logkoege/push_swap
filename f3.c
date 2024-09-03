@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:37:52 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/03 23:39:30 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/04 00:29:41 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ra(t_pushswap *ps)
 	t_node	*tmp;
 	t_node	*last;
 
+	if (ps->a == NULL || ps == NULL)
+		return ;
 	tmp = ps->a;
 	last = ft_lstlast(ps->a);
 	last->next = tmp;
@@ -30,6 +32,8 @@ void	rb(t_pushswap *ps)
 	t_node	*tmp;
 	t_node	*last;
 
+	if (ps->b == NULL || ps == NULL)
+		return ;
 	tmp = ps->b;
 	last = ft_lstlast(ps->b);
 	last->next = tmp;
@@ -50,6 +54,8 @@ void	rra(t_pushswap *ps)
 	t_node	*tmp;
 	t_node	*last;
 
+	if (ps->a == NULL || ps == NULL)
+		return ;
 	last = lst_last(ps->a);
 	tmp = before_last(ps->a);
 	last->next = ps->a;
@@ -63,6 +69,8 @@ void	rrb(t_pushswap *ps)
 	t_node	*tmp;
 	t_node	*last;
 
+	if (ps->b == NULL || ps == NULL)
+		return ;
 	last = lst_last(ps->b);
 	tmp = before_last(ps->b);
 	last->next = ps->b;
