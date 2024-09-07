@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:55:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/03 23:38:26 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/07 20:49:40 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,17 @@ void	pb(t_pushswap *ps);
 void	ss(t_pushswap *ps);
 void	sa(t_pushswap *ps);
 void	sb(t_pushswap *ps);
+void	ra(t_pushswap *ps);
+void	rb(t_pushswap *ps);
+void	rr(t_pushswap *ps);
+void	rra(t_pushswap *ps);
+void	rrb(t_pushswap *ps);
+void	rrr(t_pushswap *ps);
 int		if_doubles(char **argv);
 int		nbr_cmp(char *s1, char *s2);
 int		enlv_argifzero(char *argv);
 int		argv_nb(char *argv);
 int		pars_arg(char **argv);
+t_list	*before_last(t_node *lst);
 
 #endif
