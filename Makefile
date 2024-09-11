@@ -6,15 +6,17 @@
 #    By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/06 05:53:43 by logkoege          #+#    #+#              #
-#    Updated: 2024/09/07 20:41:43 by logkoege         ###   ########.fr        #
+#    Updated: 2024/09/07 20:55:14 by logkoege         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 	push_swap.c \
-		push.c		\
-		swap.c		\
-		ps_utils.c	\
-		
+SRCS = 	push_swap.c 	\
+		push.c			\
+		swap.c			\
+		ps_utils.c		\
+		parsing.c		\
+		r_fonctions.c	\
+
 CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:54:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/03 23:38:43 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/07 21:01:54 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	main(int argc, char **argv)
 {
+	t_list	stack_a;
+	t_list	stack_b;
 	char	**args;
 
 	if (argc < 2)
