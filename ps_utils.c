@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 20:07:26 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/11 06:45:12 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/12 20:02:22 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	pars_arg(char **argv)
 	if (nb_zero > 1)
 		return (0);
 	if (if_doubles(argv))
+		return (0);
+	if (ft_minmaxcheck(argv) == 0)
 		return (0);
 	return (1);
 }

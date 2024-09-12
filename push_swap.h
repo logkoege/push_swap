@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:55:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/07 20:55:16 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/12 21:01:44 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ int		enlv_argifzero(char *argv);
 int		argv_nb(char *argv);
 int		pars_arg(char **argv);
 t_list	*before_last(t_node *lst);
+int		ft_minmaxcheck(char *args);
+long	ft_atol(char args);
 
 #endif

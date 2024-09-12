@@ -6,25 +6,22 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 06:22:57 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/11 06:44:08 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/12 20:07:55 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	caca_parsing(char *argv)
+int	ft_minmaxcheck(char *args)
 {
 	int	i;
-	
+
 	i = i;
-	if (argc > 2)
+	while (args[i])
 	{
-		while (i != argc)
-		{
-			if (ft_atoi(argv[i]) <= -2147483648)
-				return (0);
-			i++;
-		}
+		if (ft_atol(args[i]) == 21474836480)
+			return (0);
+		i++;
 	}
-	
+	return (1);
 }
