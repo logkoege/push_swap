@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:25:41 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/04 00:28:36 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/14 20:26:45 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	pb(t_pushswap *ps)
 	ft_printf("pb\n");
 }
 
-t_list	*before_last(t_node *lst)
+t_node	*before_last(t_node *lst)
 {
 	t_node	*tmp;
 
@@ -54,7 +54,7 @@ t_list	*before_last(t_node *lst)
 			}
 		}
 	}
-	return (NULL);
+	return (tmp);
 }
 
 void	rrr(t_pushswap *ps)

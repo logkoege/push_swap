@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 20:07:26 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/12 20:02:22 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/14 21:32:15 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	pars_arg(char **argv)
 		return (0);
 	if (if_doubles(argv))
 		return (0);
-	if (ft_minmaxcheck(argv) == 0)
+	if (!(ft_minmaxcheck(argv) == 1))
 		return (0);
 	return (1);
 }
@@ -39,7 +39,7 @@ int	argv_nb(char *argv)
 {
 	int	i;
 
-	i = i;
+	i = 1;
 	if ((argv[i] == '-' || argv[i] == '+') && argv[i + 1] != '\0')
 		i++;
 	while (argv[i] && (argv[i] >= 0 && argv[i] <= 9))

@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:55:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/12 21:01:44 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/14 21:49:18 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,9 @@ int		nbr_cmp(char *s1, char *s2);
 int		enlv_argifzero(char *argv);
 int		argv_nb(char *argv);
 int		pars_arg(char **argv);
-t_list	*before_last(t_node *lst);
-int		ft_minmaxcheck(char *args);
-long	ft_atol(char args);
+t_node	*before_last(t_node *lst);
+int		ft_minmaxcheck(char **args);
+long	ft_atol(char *str);
+t_node	*ft_lstlast2(t_node *tmp);
 
 #endif
