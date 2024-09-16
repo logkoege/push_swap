@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort3.c                                            :+:      :+:    :+:   */
+/*   sort_3_4.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:41:38 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/16 03:49:28 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/16 16:03:42 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 void	sort3(t_node *lst)
 {
 	int	i;
-	
+
 	i = 0;
-	if(sort3d(lst))
-		return;
-	else if (ft_min(lst) = lst->data)
+	if (sort3d(lst))
+		return ;
+	else if (ft_min(lst) == lst->data)
 	{
 		sa(lst);
 		ra(lst);
 	}
-	else if (ft_max(lst) = lst->data)
+	else if (ft_max(lst) == lst->data)
 	{
 		ra(lst);
 		if (!sort3d(lst))
 			sa(lst);
 	}
-	else 
+	else
 	{
-		sa(lst)
+		sa(lst);
 		if (!sort3d(lst))
 		{
 			ra(lst);
@@ -40,6 +40,7 @@ void	sort3(t_node *lst)
 		}
 	}
 }
+
 int	ft_min(t_node *lst)
 {
 	int	i;
@@ -53,6 +54,7 @@ int	ft_min(t_node *lst)
 	}
 	return (i);
 }
+
 int	ft_max(t_node *lst)
 {
 	int	i;
@@ -66,10 +68,11 @@ int	ft_max(t_node *lst)
 	}
 	return (i);
 }
-int sort3d(t_node *lst)
+
+int	sort3d(t_node *lst)
 {
 	t_node	*tmp;
-	
+
 	tmp = lst->next;
 	if (lst->data < tmp->data)
 	{
@@ -81,7 +84,25 @@ int sort3d(t_node *lst)
 	}
 	return (0);
 }
+
 void	sort4(t_node *lst)
 {
-	
+	t_node	*tmp;
+	int		i;
+
+	i = 0;
+	tmp = lst;
+	if (!ft_min(tmp) == tmp->data)
+	{
+		while (i != 2)
+		{
+			ra(tmp);
+			i++;
+		}
+		if (!ft_min(tmp) == tmp->data)
+			rra(lst);
+	}
+	pb(lst);
+	sort3(lst);
+	pa(lst);
 }
