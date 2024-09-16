@@ -1,43 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
+/*   sort_100.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 06:22:57 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/16 21:01:48 by logkoege         ###   ########.fr       */
+/*   Created: 2024/09/16 16:19:22 by logkoege          #+#    #+#             */
+/*   Updated: 2024/09/16 17:17:02 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_minmaxcheck(char **args)
+sort100(t_pushswap *ps)
 {
-	int	i;
-
-	i = 1;
-	while (args[i])
-	{
-		if (ft_atol(args[i]) == 21474836480)
-		{
-			ft_printf("error")
-			return (0);
-		}
-		i++;
-	}
-	return (1);
-}
-
-t_node	*ft_lstlast2(t_node *tmp)
-{
-	if (tmp == NULL)
-		return (0);
-	while (tmp)
-	{
-		if (tmp->next == NULL)
-			return (tmp);
-		tmp = tmp->next;
-	}
-	return (tmp);
+	
 }

@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 20:07:26 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/14 21:32:15 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/16 20:56:37 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	pars_arg(char **argv)
 	}
 	if (nb_zero > 1)
 		return (0);
-	if (if_doubles(argv))
+	if (!(if_doubles(argv)))
 		return (0);
-	if (!(ft_minmaxcheck(argv) == 1))
+	if (!(ft_minmaxcheck(argv)))
 		return (0);
 	return (1);
 }
@@ -42,9 +42,9 @@ int	argv_nb(char *argv)
 	i = 1;
 	if ((argv[i] == '-' || argv[i] == '+') && argv[i + 1] != '\0')
 		i++;
-	while (argv[i] && (argv[i] >= 0 && argv[i] <= 9))
+	while (argv[i] && (argv[i] >= '0' && argv[i] <= '9'))
 		i++;
-	if (argv[i] != '\0' && (argv[i] < 0 || argv[i] > 9))
+	if (argv[i] != '\0' && (argv[i] < '0' || argv[i] > '9'))
 		return (0);
 	return (1);
 }
@@ -100,10 +100,10 @@ int	if_doubles(char **argv)
 		while (argv[j])
 		{
 			if (j != i && nbr_cmp(argv[i], argv[j]) == 0)
-				return (1);
+				return (0);
 			j++;
 		}
 		i++;
 	}
-	return (0);
+	return (1);
 }
