@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:41:38 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/17 15:54:39 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:18:09 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	sort3(t_pushswap *ps)
 {
-	int	i;
-
-	i = 0;
 	if (sort3d(ps->a))
 		return ;
 	else if (ft_min(ps->a) == ps->a->data)

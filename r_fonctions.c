@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 12:37:52 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/17 15:42:45 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 17:38:02 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ra(t_pushswap *ps)
 	t_node	*tmp;
 	t_node	*last;
 
-	if (ps->a == NULL || ps == NULL)
+	if (ps == NULL || ps->a == NULL)
 		return ;
 	tmp = ps->a;
 	last = ft_lstlast2(ps->a);
@@ -32,7 +32,7 @@ void	rb(t_pushswap *ps)
 	t_node	*tmp;
 	t_node	*last;
 
-	if (ps->b == NULL || ps == NULL)
+	if (ps == NULL || ps->b == NULL)
 		return ;
 	tmp = ps->b;
 	last = ft_lstlast2(ps->b);
@@ -54,7 +54,7 @@ void	rra(t_pushswap *ps)
 	t_node	*tmp;
 	t_node	*last;
 
-	if (ps->a == NULL || ps == NULL)
+	if (ps == NULL || ps->a == NULL)
 		return ;
 	last = ft_lstlast2(ps->a);
 	tmp = before_last(ps->a);
@@ -69,7 +69,7 @@ void	rrb(t_pushswap *ps)
 	t_node	*tmp;
 	t_node	*last;
 
-	if (ps->b == NULL || ps == NULL)
+	if (ps == NULL || ps->b == NULL)
 		return ;
 	last = ft_lstlast2(ps->b);
 	tmp = before_last(ps->b);

@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:55:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/17 15:50:59 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:26:31 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,8 @@ void	sort3(t_pushswap *ps);
 int		sort3d(t_node *lst);
 int		ft_max(t_node *lst);
 int		ft_min(t_node *lst);
+void	stack_add(t_node **stack, t_node *new);
+t_node	*new_stack(int data);
+t_node	*fill_stack(int argc, char **argv);
 
 #endif
