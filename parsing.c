@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 06:22:57 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/17 15:11:25 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 17:06:29 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ int	ft_minmaxcheck(char **args)
 	return (1);
 }
 
-t_node	*ft_lstlast2(t_node *tmp)
+t_node	*ft_lstlast2(t_node *lst)
 {
-	if (tmp == NULL)
+	if (lst == NULL)
 		return (0);
-	while (tmp)
+	while (lst)
 	{
-		if (tmp->next == NULL)
-			return (tmp);
-		tmp = tmp->next;
+		if (lst->next == NULL)
+			return (lst);
+		lst = lst->next;
 	}
-	return (tmp);
+	return (lst);
 }

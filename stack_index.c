@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 16:18:15 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/17 17:04:36 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 17:06:50 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ void	stack_add_bottom(t_node **stack, t_node *new)
 		*stack = new;
 		return ;
 	}
-	last = get_stack_bottom(*stack);
+	last = ft_lstlast2(*stack);
 	last->next = new;
 }
