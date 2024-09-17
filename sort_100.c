@@ -6,13 +6,15 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:19:22 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/16 17:17:02 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:56:05 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-sort100(t_pushswap *ps)
+void	sort100(t_pushswap *ps)
 {
-	
+	int	i;
+
+	i = 0;
 }

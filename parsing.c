@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 06:22:57 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/16 21:01:48 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:11:25 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_minmaxcheck(char **args)
 	{
 		if (ft_atol(args[i]) == 21474836480)
 		{
-			ft_printf("error")
+			ft_printf("error");
 			return (0);
 		}
 		i++;

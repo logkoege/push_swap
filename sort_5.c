@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 16:04:03 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/16 21:29:44 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:50:22 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	sort5(t_pushswap *ps)
 {
-	while (!ft_min(ps->a) == ps->a->data)
+	while (!(ft_min(ps->a) == ps->a->data))
 	{
-		ra(ps->a);
+		ra(ps);
 	}
-	pb(ps->a);
-	sort4(ps->a);
-	pa(ps->a);
+	pb(ps);
+	sort4(ps);
+	pa(ps);
 }

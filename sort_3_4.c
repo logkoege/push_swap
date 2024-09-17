@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:41:38 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/16 21:26:40 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:54:39 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,22 @@ void	sort3(t_pushswap *ps)
 		return ;
 	else if (ft_min(ps->a) == ps->a->data)
 	{
-		sa(ps->a);
-		ra(ps->a);
+		sa(ps);
+		ra(ps);
 	}
 	else if (ft_max(ps->a) == ps->a->data)
 	{
-		ra(ps->a);
-		if (!sort3d(ps->a))
-			sa(ps->a);
+		ra(ps);
+		if (!(sort3d(ps->a)))
+			sa(ps);
 	}
 	else
 	{
-		sa(ps->a);
-		if (!sort3d(ps->a))
+		sa(ps);
+		if (!(sort3d(ps->a)))
 		{
-			ra(ps->a);
-			sa(ps->a);
+			ra(ps);
+			sa(ps);
 		}
 	}
 }
@@ -90,11 +90,11 @@ int	sort3d(t_node *lst)
 
 void	sort4(t_pushswap *ps)
 {
-	while (!ft_min(ps->a) == ps->a->data)
+	while (!(ft_min(ps->a) == ps->a->data))
 	{
-		ra(ps->a);
+		ra(ps);
 	}
-	pb(ps->a);
-	sort3(ps->a);
-	pa(ps->a);
+	pb(ps);
+	sort3(ps);
+	pa(ps);
 }
