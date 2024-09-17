@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 05:54:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/16 03:35:44 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:36:54 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 int	main(int argc, char **argv)
 {
-	t_node	stack_a;
-	t_node	stack_b;
+	t_node	*stack_a;
+	t_node	*stack_b;
 	char	**args;
+	int		s_stack;	
 
-	(void)stack_b;
-	(void)stack_a;
 	if (argc < 2)
 		return (0);
 	if (argc == 2)
@@ -31,6 +30,7 @@ int	main(int argc, char **argv)
 		ft_printf("Error");
 		return (0);
 	}
-	(void)args;
+	stack_b = NULL;
+	stack_b = fill_stack(argc, argv);
 	return (0);
 }
