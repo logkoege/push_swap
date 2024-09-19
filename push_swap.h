@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 18:55:14 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/19 19:19:08 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ t_stack	*new_stack(int n);
 t_stack	*ft_lstlast2(t_stack *lst);
 void	ft_lstadd_front(t_stack **lst, t_stack *new);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
-int		sort3d(t_stack *lst);
+int		sorted(t_stack *lst);
 
 //list_utils
 void	free_lst(t_stack **lst);

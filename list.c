@@ -6,13 +6,13 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:21:05 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 17:37:44 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/19 19:19:02 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	sort3d(t_stack *lst)
+int	sorted(t_stack *lst)
 {
 	t_stack	*lst_temp;
 
