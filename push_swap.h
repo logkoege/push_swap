@@ -5,62 +5,76 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/06 05:55:07 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/17 18:26:31 by logkoege         ###   ########.fr       */
+/*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
+/*   Updated: 2024/09/19 18:55:14 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <limits.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <fcntl.h>
-# include "./printf/ft_printf.h"
-# include "./libft/libft.h"
 
-typedef struct s_node
+typedef struct s_stack
 {
-	int				index;
 	int				data;
-	struct s_node	*next;
-}		t_node;
+	int				index;
+	int				prix;
+	struct s_stack	*target;
+	struct s_stack	*next;
+}					t_stack;
 
-typedef struct s_pushswap
-{
-	t_node	*a;
-	t_node	*b;
-}		t_pushswap;
+//push_swaps_utils
+int		count_words(char *str, char c);
+int		word_length(char *str, char c);
+int		ft_strlen(char *str);
+char	*next_word_start(char *str, char c);
+char	**ft_split(char *str, char c);
 
-void	pa(t_pushswap *ps);
-void	pb(t_pushswap *ps);
-void	ss(t_pushswap *ps);
-void	sa(t_pushswap *ps);
-void	sb(t_pushswap *ps);
-void	ra(t_pushswap *ps);
-void	rb(t_pushswap *ps);
-void	rr(t_pushswap *ps);
-void	rra(t_pushswap *ps);
-void	rrb(t_pushswap *ps);
-void	rrr(t_pushswap *ps);
-int		if_doubles(char **argv);
-int		nbr_cmp(char *s1, char *s2);
-int		enlv_argifzero(char *argv);
-int		argv_nb(char *argv);
-int		pars_arg(char **argv);
-t_node	*before_last(t_node *lst);
-int		ft_minmaxcheck(char **args);
-long	ft_atol(char *str);
-t_node	*ft_lstlast2(t_node *tmp);
-void	sort5(t_pushswap *ps);
-void	sort4(t_pushswap *ps);
-void	sort3(t_pushswap *ps);
-int		sort3d(t_node *lst);
-int		ft_max(t_node *lst);
-int		ft_min(t_node *lst);
-void	stack_add(t_node **stack, t_node *new);
-t_node	*new_stack(int data);
-t_node	*fill_stack(int argc, char **argv);
+//push_swap_utils2
+t_stack	*ft_min(t_stack *lst);
+t_stack	*ft_min(t_stack *lst);
+int		ft_positive(int n);
+
+//instructions
+t_stack	*sa(t_stack *lst, int n);
+t_stack	*sb(t_stack *lst, int n);
+void	ss(t_stack **stack_a, t_stack **stack_b);
+void	pa(t_stack **stack_a, t_stack **stack_b);
+void	pb(t_stack **stack_b, t_stack **stack_a);
+
+//instructions2
+void	rb(t_stack **stack_b, int n);
+void	ra(t_stack **stack_a, int n);
+void	rr(t_stack **stack_a, t_stack **stack_b);
+void	rrb(t_stack **stack_b, int n);
+void	rra(t_stack **stack_a, int n);
+
+//instructions3
+void	rrr(t_stack **stack_a, t_stack **stack_b);
+//parsing
+t_stack	*fill_stack_a(char **argv);
+void	if_double(t_stack *lst, int n, char **args);
+void	ft_free(char **args);
+void	if_error(t_stack **lst, char **args);
+void	if_error(t_stack **lst, char **args);
+
+//sort
+
+//sort_utils
+
+//list
+t_stack	*new_stack(int n);
+t_stack	*ft_lstlast2(t_stack *lst);
+void	ft_lstadd_front(t_stack **lst, t_stack *new);
+void	ft_lstadd_back(t_stack **lst, t_stack *new);
+int		sort3d(t_stack *lst);
+
+//list_utils
+void	free_lst(t_stack **lst);
+int		stack_size(t_stack *lst);
 
 #endif

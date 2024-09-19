@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5.c                                           :+:      :+:    :+:   */
+/*   instructions3.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 16:04:03 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/17 15:50:22 by logkoege         ###   ########.fr       */
+/*   Created: 2024/09/19 18:55:25 by logkoege          #+#    #+#             */
+/*   Updated: 2024/09/19 18:56:49 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort5(t_pushswap *ps)
+void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	while (!(ft_min(ps->a) == ps->a->data))
-	{
-		ra(ps);
-	}
-	pb(ps);
-	sort4(ps);
-	pa(ps);
+	rra(*stack_a, 1);
+	rrb(*stack_b, 1);
+	write(1, rrr\n, 4);
 }
