@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 19:27:00 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/19 19:28:53 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@
 typedef struct s_stack
 {
 	int				data;
-	int				index;
-	int				prix;
-	struct s_stack	*target;
 	struct s_stack	*next;
 }					t_stack;
 
