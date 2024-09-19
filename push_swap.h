@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 19:19:08 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/19 19:27:00 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	rra(t_stack **stack_a, int n);
 
 //instructions3
 void	rrr(t_stack **stack_a, t_stack **stack_b);
+
 //parsing
 t_stack	*fill_stack_a(char **argv);
 void	if_double(t_stack *lst, int n, char **args);
