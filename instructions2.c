@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 17:59:23 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 18:54:06 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/20 20:22:46 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 void	ra(t_stack **stack_a, int n)
 {
 	t_stack	*lst_temp;
-	int		tmp;
+	int		intemp;
 
 	if (!(*stack_a))
 		return ;
-	tmp = (*stack_a)->data;
+	intemp = (*stack_a)->data;
 	lst_temp = (*stack_a)->next;
 	free(*stack_a);
 	(*stack_a) = lst_temp;
-	ft_lstadd_back(stack_a, new_lst(tmp));
+	ft_lstadd_back(stack_a, new_stack(intemp));
 	if (n == 0)
 		write(1, "ra\n", 3);
 }
@@ -31,23 +31,23 @@ void	ra(t_stack **stack_a, int n)
 void	rb(t_stack **stack_b, int n)
 {
 	t_stack	*lst_temp;
-	int		tmp;
+	int		intemp;
 
 	if (!(*stack_b))
 		return ;
-	tmp = (*stack_b)->data;
+	intemp = (*stack_b)->data;
 	lst_temp = (*stack_b)->next;
 	free(*stack_b);
 	(*stack_b) = lst_temp;
-	ft_lstadd_back(stack_b, new_lst(tmp));
+	ft_lstadd_back(stack_b, new_stack(intemp));
 	if (n == 0)
 		write(1, "rb\n", 3);
 }
 
 void	rr(t_stack **stack_a, t_stack **stack_b)
 {
-	rotate_a(stack_a, 1);
-	rotate_b(stack_b, 1);
+	ra(stack_a, 1);
+	rb(stack_b, 1);
 	write(1, "rr\n", 3);
 }
 
@@ -70,7 +70,7 @@ void	rra(t_stack **stack_a, int n)
 	}
 	lst_temp2 = (*stack_a)->next;
 	(*stack_a)->next = NULL;
-	tmp->next = lst_temp;
+	lst_temp2->next = lst_temp;
 	(*stack_a) = lst_temp2;
 	if (n == 0)
 		write(1, "rra\n", 4);
@@ -78,7 +78,7 @@ void	rra(t_stack **stack_a, int n)
 
 void	rrb(t_stack **stack_b, int n)
 {
-	int		nb;
+	int		intemp;
 	t_stack	*lst_temp;
 	t_stack	*lst_temp2;
 	int		len;
@@ -96,10 +96,10 @@ void	rrb(t_stack **stack_b, int n)
 	}
 	lst_temp2 = (*stack_b)->next;
 	(*stack_b)->next = NULL;
-	nb = lst_temp2->nb;
+	intemp = lst_temp2->data;
 	free(lst_temp2);
 	(*stack_b) = lst_temp;
-	ft_lstadd_front(stack_b, new_stack(nb));
+	ft_lstadd_front(stack_b, new_stack(intemp));
 	if (n == 0)
 		write(1, "rrb\n", 4);
 }

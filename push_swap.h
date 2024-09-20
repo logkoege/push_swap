@@ -6,17 +6,17 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 19:28:53 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/20 21:31:42 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <unistd.h>
+# include <stdlib.h>
 # include <limits.h>
 # include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
 
 typedef struct s_stack
 {
@@ -32,7 +32,7 @@ char	*next_word_start(char *str, char c);
 char	**ft_split(char *str, char c);
 
 //push_swap_utils2
-t_stack	*ft_min(t_stack *lst);
+t_stack	*ft_max(t_stack *lst);
 t_stack	*ft_min(t_stack *lst);
 int		ft_positive(int n);
 
@@ -47,8 +47,8 @@ void	pb(t_stack **stack_b, t_stack **stack_a);
 void	rb(t_stack **stack_b, int n);
 void	ra(t_stack **stack_a, int n);
 void	rr(t_stack **stack_a, t_stack **stack_b);
-void	rrb(t_stack **stack_b, int n);
 void	rra(t_stack **stack_a, int n);
+void	rrb(t_stack **stack_b, int n);
 
 //instructions3
 void	rrr(t_stack **stack_a, t_stack **stack_b);
@@ -58,9 +58,10 @@ t_stack	*fill_stack_a(char **argv);
 void	if_double(t_stack *lst, int n, char **args);
 void	ft_free(char **args);
 void	if_error(t_stack **lst, char **args);
-void	if_error(t_stack **lst, char **args);
+long	ft_atol(char *str, t_stack **lst, char **args);
 
 //sort
+void	sort3(t_stack **stack_a);
 
 //sort_utils
 

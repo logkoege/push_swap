@@ -6,7 +6,7 @@
 #    By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/19 19:13:49 by logkoege          #+#    #+#              #
-#    Updated: 2024/09/19 19:22:05 by logkoege         ###   ########.fr        #
+#    Updated: 2024/09/20 20:27:10 by logkoege         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS = push_swap.c			\
 		list_utils.c		\
 		instructions.c		\
 		instructions2.c		\
-		instructions3		\
+		instructions3.c		\
 		parsing.c			\
 		sort.c				\
 		sort_utils.c		\

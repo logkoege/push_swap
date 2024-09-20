@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:24:20 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 17:55:05 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/20 20:16:20 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_positive(int n)
 
 t_stack	*ft_min(t_stack *lst)
 {
-	t_stack	lst_min;
+	t_stack	*lst_min;
 	int		i;
 
-	lst_min = lst->data;
+	lst_min = lst;
 	i = lst->data;
 	while (lst)
 	{
@@ -40,10 +40,10 @@ t_stack	*ft_min(t_stack *lst)
 
 t_stack	*ft_max(t_stack *lst)
 {
-	t_stack	lst_max;
+	t_stack	*lst_max;
 	int		i;
 
-	lst_max = lst->data;
+	lst_max = lst;
 	i = lst->data;
 	while (lst)
 	{

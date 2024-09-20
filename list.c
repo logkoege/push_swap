@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:21:05 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 19:19:02 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/20 20:09:58 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 int	sorted(t_stack *lst)
 {
-	t_stack	*lst_temp;
+	int	i;
+	int	n;
 
-	if (!lst || !lst->next)
-		return (1);
-	lst_temp = lst->next;
-	while (lst_temp)
+	i = 1;
+	while (lst->next)
 	{
-		if (lst->data > lst_temp->data)
-			return (1);
-		lst = lst_temp;
-		lst_temp = lst_temp->next;
+		n = lst->data;
+		lst = lst->next;
+		i++;
+		if (n > lst->data)
+			return (i);
 	}
 	return (0);
 }

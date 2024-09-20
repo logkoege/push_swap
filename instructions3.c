@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 18:55:25 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 18:56:49 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/20 20:24:51 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	rra(*stack_a, 1);
-	rrb(*stack_b, 1);
-	write(1, rrr\n, 4);
+	rra(stack_a, 1);
+	rrb(stack_b, 1);
+	write(1, "rrr\n", 4);
 }
