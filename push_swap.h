@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/20 21:31:42 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/27 00:56:01 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
 typedef struct s_stack
 {
 	int				data;
+	int				index;
+	int				prix;
+	struct s_stack	*target;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -62,8 +65,13 @@ long	ft_atol(char *str, t_stack **lst, char **args);
 
 //sort
 void	sort3(t_stack **stack_a);
+void	sort(t_stack **stack_a, t_stack **stack_b);
+void	setup_index(t_stack *lst);
+void	setup_target_a(t_stack *stack_a, t_stack *stack_b);
+void	setup_target_b(t_stack *stack_a, t_stack *stack_b);
 
 //sort_utils
+void	min(t_stack **stack_a);
 
 //list
 t_stack	*new_stack(int n);
