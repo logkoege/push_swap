@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:24:20 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/20 20:16:20 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/28 01:13:25 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,16 @@ t_stack	*ft_max(t_stack *lst)
 		lst = lst->next;
 	}
 	return (lst_max);
+}
+
+void	setup_lst(t_stack **stack_a, t_stack **stack_b, int n)
+{
+	setup_index(*stack_a);
+	setup_index(*stack_b);
+	setup_target_a(*stack_a, *stack_b);
+	setup_target_b(*stack_b, *stack_a);
+	if (n == 0)
+		prix(*stack_a);
+	else if (n == 1)
+		prix(*stack_b);
 }

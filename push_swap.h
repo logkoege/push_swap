@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/27 00:56:01 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/28 01:18:52 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	**ft_split(char *str, char c);
 //push_swap_utils2
 t_stack	*ft_max(t_stack *lst);
 t_stack	*ft_min(t_stack *lst);
+void	setup_lst(t_stack **stack_a, t_stack **stack_b, int n);
 int		ft_positive(int n);
 
 //instructions
@@ -83,5 +84,6 @@ int		sorted(t_stack *lst);
 //list_utils
 void	free_lst(t_stack **lst);
 int		stack_size(t_stack *lst);
+void	prix(t_stack *lst);
 
 #endif
