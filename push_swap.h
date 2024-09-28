@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/28 19:58:44 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/28 22:45:44 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,14 @@ void	sort3(t_stack **stack_a);
 void	sort(t_stack **stack_a, t_stack **stack_b);
 void	setup_index(t_stack *lst);
 void	setup_target_a(t_stack *stack_a, t_stack *stack_b);
-void	setup_target_b(t_stack *stack_a, t_stack *stack_b);
+void	setup_target_b(t_stack *stack_b, t_stack *stack_a);
 
 //sort_utils
 t_stack	*reduc(t_stack *lst);
 void	min(t_stack **stack_a);
 void	prix(t_stack *lst);
 void	push_back(t_stack **stack_a, t_stack **stack_b);
+void	push(t_stack **stack_a, t_stack **stack_b);
 
 //list
 t_stack	*new_stack(int n);

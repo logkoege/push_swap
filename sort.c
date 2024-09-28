@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 17:41:00 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/27 19:51:06 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/28 22:48:50 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,15 +58,14 @@ void	sort(t_stack **stack_a, t_stack **stack_b)
 	size = stack_size(*stack_a);
 	if (size-- > 3)
 		pb(stack_b, stack_a);
-	if (size > 3)
-	{
+	if (size-- > 3)
 		pb(stack_b, stack_a);
-		size--;
-	}
 	while (size > 3)
 	{
 		setup_lst(stack_a, stack_b, 0);
+		printf("lol\n");
 		push_back(stack_a, stack_b);
+		printf("lal\n");
 		size--;
 	}
 	sort3(stack_a);

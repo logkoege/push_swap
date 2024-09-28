@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:04:49 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/28 20:05:57 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/28 22:52:40 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ void	push_back(t_stack **stack_a, t_stack **stack_b)
 	t_stack	*cheap;
 	int		i;
 
-	i = 1;
+	i = 0;
 	cheap = reduc(*stack_b);
-	while (i)
+	while (i != 1)
 	{
 		setup_index(*stack_a);
 		setup_index(*stack_b);
@@ -69,7 +69,7 @@ void	push_back(t_stack **stack_a, t_stack **stack_b)
 		else if (cheap->target->index < 0)
 			rra(stack_a, 0);
 		if ((*stack_a)->data == cheap->target->data
-			&& (*stack_b)->data == cheap->data && i - 1 == 0)
+			&& (*stack_b)->data == cheap->data && i++ == 0)
 			pa(stack_a, stack_b);
 	}
 }
@@ -90,4 +90,33 @@ t_stack	*reduc(t_stack *lst)
 		lst = lst->next;
 	}
 	return (cheap);
+}
+
+void	push(t_stack **stack_a, t_stack **stack_b)
+{
+	t_stack	*cheap;
+	int		i;
+
+	i = 0;
+	cheap = reduc(*stack_a);
+	while (i != 1)
+	{
+		setup_index(*stack_a);
+		setup_index(*stack_b);
+		if ((*stack_a)->data == cheap->data
+			&& (*stack_b)->data == cheap->target->data && i++ == 0)
+			pb(stack_b, stack_a);
+		else if (cheap->target->index > 0 && cheap->index > 0 && i == 0)
+			rr(stack_a, stack_b);
+		else if (cheap->target->index < 0 && cheap->index < 0 && i == 0)
+			rrr(stack_a, stack_b);
+		else if (cheap->index > 0 && i == 0)
+			ra(stack_a, 0);
+		else if (cheap->index < 0 && i == 0)
+			rra(stack_a, 0);
+		else if (cheap->target->index > 0 && i == 0)
+			rb(stack_b, 0);
+		else if (cheap->target->index < 0 && i == 0)
+			rrb(stack_b, 0);
+	}
 }
