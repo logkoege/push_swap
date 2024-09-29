@@ -39,6 +39,7 @@ t_stack	*ft_max(t_stack *lst);
 t_stack	*ft_min(t_stack *lst);
 void	setup_lst(t_stack **stack_a, t_stack **stack_b, int n);
 int		ft_positive(int n);
+int		sorted(t_stack *lst);
 
 //instructions
 t_stack	*sa(t_stack *lst, int n);
@@ -83,7 +84,6 @@ t_stack	*new_stack(int n);
 t_stack	*ft_lstlast2(t_stack *lst);
 void	ft_lstadd_front(t_stack **lst, t_stack *new);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
-int		sorted(t_stack *lst);
 
 //list_utils
 void	free_lst(t_stack **lst);
