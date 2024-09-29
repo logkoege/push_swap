@@ -6,7 +6,7 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:34:29 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/28 22:45:44 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/29 17:59:31 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ t_stack	*fill_stack_a(char **argv);
 void	if_double(t_stack *lst, int n, char **args);
 void	ft_free(char **args);
 void	if_error(t_stack **lst, char **args);
-long	ft_atol(char *str, t_stack **lst, char **args);
+int		ft_atoi(char *str, t_stack **lst, char **args);
 
 //sort
 void	sort3(t_stack **stack_a);

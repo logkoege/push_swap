@@ -6,94 +6,114 @@
 /*   By: logkoege <logkoege@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:52:10 by logkoege          #+#    #+#             */
-/*   Updated: 2024/09/19 17:19:59 by logkoege         ###   ########.fr       */
+/*   Updated: 2024/09/29 17:58:47 by logkoege         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	count_words(char *str, char c)
+int	ft_strlen(char *s)
 {
-	int		count;
-	int		in_word;
-	int		i;
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+char	*ft_substr(char *s, unsigned int start, int len)
+{
+	int				i;
+	unsigned int	j;
+	char			*str;
+
+	i = 0;
+	j = 0;
+	if (!s || (unsigned int)ft_strlen(s) < start)
+		return (NULL);
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	while (s[j])
+	{
+		if (i < len && j >= start)
+		{
+			str[i] = s[j];
+			i++;
+		}
+		j++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+char	*ft_strchr(char *str, int c)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (NULL);
+	while (str[i])
+	{
+		if (str[i] == (char)c)
+			return ((char *)&str[i]);
+		i++;
+	}
+	if (str[i] == (char)c)
+		return ((char *)&str[i]);
+	else
+		return (NULL);
+}
+
+int	ft_datamot(char *str, char c)
+{
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
-	in_word = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 	{
-		if (str[i] == c)
-		{
-			in_word = 0;
-		}
-		else if (in_word == 0)
-		{
-			in_word = 1;
+		while (str[i] == c)
+			i++;
+		if (str[i])
 			count++;
-		}
-		i++;
+		while (str[i] != c && str[i])
+			i++;
 	}
 	return (count);
 }
 
-char	*next_word_start(char *str, char c)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] && str[i] == c)
-	{
-		i++;
-	}
-	return (&str[i]);
-}
-
-int	word_length(char *str, char c)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] && str[i] != c)
-		i++;
-	return (i);
-}
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 char	**ft_split(char *str, char c)
 {
-	int		j;
-	int		word_count;
+	char	**tab;
 	int		i;
-	int		word_len;
-	char	**result;
+	int		len;
 
-	word_count = count_words(str, c);
 	i = 0;
-	result = (char **)malloc(sizeof(char *) * (word_count + 1));
-	if (!result)
+	tab = (char **)malloc(sizeof(char *) * (ft_datamot(str, c) + 1));
+	if (!tab || !str)
 		return (NULL);
-	while (*str && i < word_count)
+	while (*str)
 	{
-		str = next_word_start(str, c);
-		word_len = word_length(str, c);
-		result[i] = (char *)malloc(sizeof(char) * (word_len + 1));
-		if (!result[i])
-			return (NULL);
-		j = 0;
-		while (j < word_len)
-			result[i][j++] = *str++;
-		result[i++][word_len] = '\0';
+		while (*str == c && *str)
+			str++;
+		if (*str)
+		{
+			if (!ft_strchr(str, c))
+				len = ft_strlen(str);
+			else
+				len = ft_strchr(str, c) - str;
+			tab[i++] = ft_substr(str, 0, len);
+			str = str + len;
+		}
 	}
-	result[word_count] = NULL;
-	return (result);
+	tab[i] = 0;
+	return (tab);
 }
