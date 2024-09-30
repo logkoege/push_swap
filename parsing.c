@@ -14,11 +14,14 @@
 
 void	if_double(t_stack *lst, int n, char **tab)
 {
-	while (lst)
+	t_stack	*temp;
+
+	temp = lst;
+	while (temp)
 	{
-		if (lst->data == n)
+		if (temp->data == n)
 			if_error(&lst, tab);
-		lst = lst->next;
+		temp = temp->next;
 	}
 }
 
